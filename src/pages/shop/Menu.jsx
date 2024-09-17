@@ -109,44 +109,56 @@ function Menu() {
           <div className="flex flex-row justify-start md:items-center md:gap-8 gap-4 flex-wrap">
             <button
               onClick={showAll}
-              className={selectedCategory === "all" ? "active" : ""}
+              className={
+                selectedCategory === "all" ? "active" : "hover:text-green"
+              }
             >
               All
             </button>
             <button
               onClick={() => filterItems("salad")}
-              className={selectedCategory === "salad" ? "active" : ""}
+              className={
+                selectedCategory === "salad" ? "active" : "hover:text-green"
+              }
             >
               salad
             </button>
             <button
               onClick={() => filterItems("pizza")}
-              className={selectedCategory === "pizza" ? "active" : ""}
+              className={
+                selectedCategory === "pizza" ? "active" : "hover:text-green"
+              }
             >
               Pizza
             </button>
             <button
               onClick={() => filterItems("soup")}
-              className={selectedCategory === "soup" ? "active" : ""}
+              className={
+                selectedCategory === "soup" ? "active" : "hover:text-green"
+              }
             >
               Soups
             </button>
             <button
               onClick={() => filterItems("dessert")}
-              className={selectedCategory === "dessert" ? "active" : ""}
+              className={
+                selectedCategory === "dessert" ? "active" : "hover:text-green"
+              }
             >
               Desserts
             </button>
             <button
               onClick={() => filterItems("drinks")}
-              className={selectedCategory === "drinks" ? "active" : ""}
+              className={
+                selectedCategory === "drinks" ? "active" : "hover:text-green"
+              }
             >
               Drinks
             </button>
           </div>
           {/* sort */}
-          <div className="flex justify-end mb-4 rounded-sm">
-            <div className="bg-green p-2">
+          <div className="flex justify-end mb-4 rounded-md">
+            <div className="bg-green p-2 text-white">
               <FaFilter className="h-4 w-4" />
             </div>
             {/* sorting options */}
@@ -155,7 +167,7 @@ function Menu() {
               id="sort"
               onChange={(e) => handleSortChange(e.target.value)}
               value={sortOption}
-              className="bg-green px-2 py-1 rounded-sm"
+              className="bg-green px-2 py-1 rounded-r-md text-white"
             >
               <option value="default">Default</option>
               <option value="A-Z">A-Z</option>
