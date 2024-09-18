@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "/logo.png";
-import { BiPhoneCall } from "react-icons/bi";
+import { FaRegUser } from "react-icons/fa";
+import Modal from "./Modal";
 
 function Navbar() {
   const [isSticky, setSticky] = useState(false);
@@ -145,10 +146,14 @@ function Navbar() {
               <span className="badge badge-sm indicator-item">8</span>
             </div>
           </div>
-          {/* btn */}
-          <a className="btn bg-green rounded-full px-6 text-white flex items-center gap-2">
-            <BiPhoneCall /> Contact
-          </a>
+          {/* login btn */}
+          <button
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+            className="btn bg-green rounded-full px-6 text-white flex items-center gap-2"
+          >
+            <FaRegUser /> Login
+          </button>
+          <Modal />
         </div>
       </div>
     </header>
